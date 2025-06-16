@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QB-Alicia UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+    <!-- Warning Screen -->
+    <div class="warning-screen" id="warningScreen">
+        <div class="warning-container">
+            <div class="warning-title">Uyarı</div>
+            <div class="warning-message">Bu eylemi gerçekleştirmek istediğinizden emin misiniz?</div>
+            <div class="button-container">
+                <button class="warning-button accept-button" onclick="acceptWarning()">Evet</button>
+                <button class="warning-button decline-button" onclick="closeWarning()">Hayır</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lobby Screen -->
+    <div class="lobby-screen" id="lobbyScreen">
+        <div class="lobby-container">
+            <div class="lobby-title">Lobi</div>
+            <ul class="player-list" id="playerList">
+                <!-- Oyuncular script.js tarafından doldurulacak -->
+            </ul>
+            
+            <!-- Çıkış butonu -->
+            <div class="lobby-actions">
+                <button class="exit-btn" onclick="exitLobby()">
+                    <span class="exit-icon">🚪</span>
+                    Çıkış
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Symbol Selection Container (Tahmin Fazı İçin) -->
+    <div id="symbolContainer" style="
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: row;
+        gap: 20px;
+        z-index: 10000;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 15px;
+        border: 3px solid #fff;
+    ">
+        <!-- Sembol butonları JavaScript tarafından dinamik oluşturulacak -->
+    </div>
+
+    <!-- Countdown Container (NUI tarafından oluşturulacak) -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
